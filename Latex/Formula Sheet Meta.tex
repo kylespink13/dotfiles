@@ -1,0 +1,29 @@
+\documentclass[9pt]{extarticle} %Supports font sizes of 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt and 20pt.
+\usepackage{commands} %modified margin to be 0.15in
+
+\usepackage{marvosym} %Gives access to a collection of symbols and special characters
+\usepackage{enumitem} %provides custom control over lists to change spacing, indentation, numbering styles, etc.
+\usepackage{paracol} %Independent column alignment
+\newcommand{\bfitem}[1]{\item \textbf{#1}}
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{document}
+
+\begin{paracol}{2}
+
+\noindent \underline{\textbf{Chapter 1:}}
+\begin{itemize}[left=0pt, nosep]
+    \bfitem{Topic 1:}
+\end{itemize}
+
+\switchcolumn 
+
+\begin{minipage}[t]{0.45\textwidth}
+    \raggedright
+    \includegraphics[width=.5\linewidth]{Max Shear Stress Theory.jpeg}
+\end{minipage}
+    
+\end{paracol}
+\end{document}
