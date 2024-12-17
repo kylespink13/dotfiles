@@ -1,0 +1,117 @@
+\documentclass[aspectratio=43, 10pt]{beamer} % widescreen ratio
+% \documentclass[10pt]{beamer} % standard ratio
+% background should be changed accordingly
+\usepackage[english]{babel}
+\usepackage{commands}
+
+\usepackage{pgfplots}
+\usepackage{circuitikz}
+\usepackage{helvet} %to use Arial-like font
+
+\mode<presentation>{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  %\usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\setbeamertemplate{background}{
+    \includegraphics[width=\paperwidth,height=\paperheight]{UCI_Slides_Template_Cover.png}
+    %\includegraphics[width=\paperwidth,height=\paperheight]{backgroundstandard.pdJ}
+}
+
+\setbeamertemplate{headline}{ %to leave some space for the UCI headline
+    \vspace{1.4cm} %change depending on font size
+}
+
+\setbeamertemplate{section in toc}[sections numbered]
+
+
+\setbeamertemplate{footline}{
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=0.3375\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+        \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.3375\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}
+
+
+\makeatother
+
+\setbeamertemplate{frametitle}
+{
+    \vspace{-1em} % Adjust this value to move the title up or down
+    \insertframetitle
+}
+
+
+\setbeamercolor{title}{fg=black} % Set title color to black
+\setbeamercolor{author}{fg=black} % Set author color to black
+\setbeamercolor{date}{fg=black} % Set date color to black
+\setbeamercolor{frametitle}{fg=black} % Set frame title color to black
+\setbeamercolor{normal text}{fg=black} % Set normal text color to black
+\hypersetup{colorlinks=true, linkcolor=black} % Set hyperlink color to black
+
+\setbeamerfont{title}{size=\huge}
+%\setbeamerfont{normal text}{size=\huge}
+
+\title[Beamer template]{Title}
+\vspace*{0.25in}
+\subtitle{Subtitle}
+\author{Kyle Spink}
+\institute{}
+\date{}
+
+\begin{document}
+
+\begin{frame}[noframenumbering, plain]
+    \titlepage
+\end{frame}
+
+\setbeamertemplate{background}{
+    \includegraphics[width=\paperwidth,height=\paperheight]{UCI_Slides_Template.png} % Different background
+}
+
+%Automatically generated outline.
+% \begin{frame}[t]{Outline}
+%     \tableofcontents
+% \end{frame}
+\begin{frame}[t]{Outline}
+    \tableofcontents[hideallsubsections]
+    \vspace{-1.5em} % Reduces extra vertical space below the TOC
+\end{frame}
+
+\section{Section}
+\begin{frame}[t]{Section I}
+    \small 
+    \begin{itemize}
+        \item Lorem ipsum
+        \item Lorem ipsum
+    \end{itemize}
+    \vspace*{0.875in}
+    \begin{center}
+        \includegraphics[scale=0.375]{Shape_Optimization.png}
+        \\
+        \vspace*{0.1in}
+        \scriptsize Fig. 1: Lorem ipsum
+    \end{center}
+    % \framebreak
+\end{frame}
+
+% \section{References}
+% \begin{frame}[t, allowframebreaks, noframenumbering]{References}
+%     \printbibliography
+% \end{frame}
+\section{References}
+\begin{frame}[t, allowframebreaks, noframenumbering]{References}
+    % Set the frame number color to white locally
+    \setbeamercolor{framenumber}{fg=white}
+    \printbibliography
+\end{frame}
+
+\end{document}
