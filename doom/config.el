@@ -83,7 +83,7 @@
           (lambda ()
             (set-frame-parameter nil 'alpha '(93 . 100)))) ;; sets transparency to 80
 
-(setq org-directory "~/Users/kylespink/Library/CloudStorage/GoogleDrive-kspink@uci.edu/My Drive/Emacs Org Mode") ;; sets default Org directory
+(setq org-directory "") ;; sets default Org directory
 
 (after! org
   (setq org-todo-keywords
@@ -108,10 +108,10 @@
 
 ;; Add directories for current and past notes
 (defvar my-current-notes-dir
-  (file-truename "/Users/kylespink/Library/CloudStorage/GoogleDrive-kspink@uci.edu/My Drive/F2024"))
+  (file-truename ""))
 
 (defvar my-past-notes-dir
-  (file-truename "/Users/kylespink/Library/CloudStorage/OneDrive-UCIrvine/Past Classes"))
+  (file-truename ""))
 
 ;; Create symlinks for easy navigation (Optional, for convenience)
 ;; Uncomment if you want symlinks to organize in a unified directory
@@ -150,7 +150,7 @@
 (use-package org-noter
   :ensure t
   :config
-  (setq org-noter-notes-search-path '("~/school-notes/current" "~/school-notes/past")))
+  (setq org-noter-notes-search-path '("")))
 
 (defun org-roam-add-pdfs (dir)
   "Add all PDFs in DIR to Org-Roam as nodes."
