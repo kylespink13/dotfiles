@@ -30,6 +30,9 @@ cursor-style = "block"
 shell-integration = zsh
 shell-integration-features = cursor,sudo,title
 macos-titlebar-style=transparent
+macos-dock-drop-behavior = "new-tab"
+macos-icon = "custom"
+macos-custom-icon = "/Users/kylespink/.config/ghostty/ghostty_linux_icon.png"
 
 # keybindings
 
